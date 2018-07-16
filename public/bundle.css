@@ -7725,31 +7725,19 @@ a.text-light-calm-100:hover, a.text-light-calm-100:focus {
       color: #fff; }
 
 .submenu-toggle {
-  padding: .75em;
-  position: absolute;
-  top: .45em;
-  right: 0;
-  margin-right: .5em;
   cursor: pointer;
-  transition: all ease-in-out 500ms; }
+  -webkit-transition: background-color 1s;
+  -moz-transition: background-color 1s;
+  -o-transition: background-color 1s;
+  -ms-transition: background-color 1s;
+  transition: background-color 1s; }
+
+.submenu-toggle:hover {
+  color: #fff;
+  background-color: #003954; }
 
 .submenu--open {
   display: block; }
-
-.plus,
-.plus::before {
-  content: '';
-  display: block;
-  background-color: #003954;
-  height: 1px;
-  width: .5em; }
-
-.plus::before {
-  transform: translateY(0.5px) rotate(90deg);
-  background-color: #003954; }
-
-.open .plus::before {
-  opacity: 0; }
 
 img {
   margin-left: 50px; }
@@ -7758,56 +7746,14 @@ img {
   img {
     margin: 0; }
   .menu-toggle,
-  .submenu,
-  .submenu-toggle {
+  .submenu {
     display: none; }
   .main-nav {
     float: right;
     position: relative;
     display: block;
     padding: 0;
-    left: 0; }
-  .main-nav ul::before {
-    content: '';
-    position: absolute;
-    transform: translateX(-22px);
-    border-bottom: 40px solid #3d82ab;
-    border-left: 22px solid transparent; }
-  .main-nav li {
-    float: left;
-    display: inline-block; }
-  .nav-item {
-    width: auto;
-    margin: 0;
-    border: none;
-    background-color: #3d82ab; }
-    .nav-item a:hover, .nav-item a:focus {
-      color: #fff;
-      background-color: #3d82ab; }
-      .nav-item a:hover + div.submenu, .nav-item a:focus + div.submenu {
-        width: 194px;
-        position: absolute;
-        display: block;
-        z-index: 1; }
-    .nav-item a {
-      padding: .5em 1em .5em 1em;
-      margin: 0;
-      color: #f7f7f9;
-      border-left: 1px solid #2f6f9f;
-      border-right: 1px solid #4f9fcf; }
-    .nav-item a:first-child {
-      border-left: none; }
-    .nav-item .submenu {
-      background-color: #3d82ab; }
-      .nav-item .submenu a {
-        color: #f7f7f9;
-        border: none; }
-        .nav-item .submenu a:hover {
-          color: #fff; }
-    .nav-item .submenu:hover {
-      width: 194px;
-      position: absolute;
-      display: block; } }
+    left: 0; } }
 
 .page-content {
   background-image: url(/images/img-L_nkoGwvSGk-rOK.png);

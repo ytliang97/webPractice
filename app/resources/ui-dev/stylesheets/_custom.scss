@@ -78,7 +78,6 @@
   padding: 0;
 }
 
-
 .main-nav a {
   display: block;
   text-decoration: none;
@@ -139,8 +138,6 @@
 .open .hamburger::after {
   transform: translateY(-3px) rotate(-90deg);
 }
-
-
 //--- sub menu
 .nav-item {
   position: relative;
@@ -150,6 +147,7 @@
     color: #fff;
   }
 }
+
 .submenu {
   display: none;
   background-color: #f2f6f9;
@@ -164,36 +162,23 @@
 }
 
 .submenu-toggle {
-  padding: .75em;
-  position: absolute;
-  top: .45em;
-  right: 0;
-  margin-right: .5em;
   cursor: pointer;
-  transition: all ease-in-out 500ms;
+  -webkit-transition: background-color 1s;
+  -moz-transition: background-color 1s;
+  -o-transition: background-color 1s;
+  -ms-transition: background-color 1s;
+  transition: background-color 1s;
+}
+
+.submenu-toggle:hover {
+  color: #fff;
+  background-color: $primary;
 }
 
 .submenu--open {
   display: block;
 }
 
-.plus,
-.plus::before {
-  content: '';
-  display: block;
-  background-color: $primary;
-  height: 1px;
-  width: .5em;
-}
-
-.plus::before {
-  transform: translateY(.5px) rotate(90deg);
-  background-color: $primary;
-}
-
-.open .plus::before {
-  opacity: 0;
-}
 img {
   margin-left: 50px;
 }
@@ -203,10 +188,10 @@ img {
     margin: 0;
   }
   .menu-toggle,
-  .submenu,
-  .submenu-toggle {
+  .submenu {
     display: none;
   }
+
   .main-nav {
     float: right;
     position: relative;
@@ -214,62 +199,6 @@ img {
     padding: 0;
     left: 0;
   }
-  .main-nav ul::before {
-    content: '';
-    position: absolute;
-    transform:  translateX(-22px);
-    border-bottom: 40px solid $secondary;
-    border-left: 22px solid rgba(0,0,0,0);
-  }
-  .main-nav li {
-    float: left;
-    display: inline-block;
-  }
-  .nav-item {
-    width: auto;
-    margin: 0;
-    border: none;
-    background-color: $secondary;
-     a {
-      &:hover,
-      &:focus {
-        color: #fff;
-        background-color: $secondary;
-        + div.submenu {
-          width: 194px;
-          position: absolute;
-          display: block;
-          z-index: 1;
-        }
-     }
-    }
-    a {
-       padding: .5em 1em .5em 1em;
-       margin: 0;
-       color: #f7f7f9;
-       border-left: 1px solid #2f6f9f;
-       border-right: 1px solid #4f9fcf;
-     }
-    a:first-child {
-      border-left: none;
-    }
-    .submenu {
-      background-color: $secondary;
-      a {
-        color: #f7f7f9;
-        border: none;
-        &:hover {
-          color: #fff;
-        }
-      }
-    }
-    .submenu:hover {
-      width: 194px;
-      position: absolute;
-      display: block;
-    }
-  }
-
 }
 
 .page-content {
