@@ -7661,11 +7661,7 @@ a.text-light-calm-100:hover, a.text-light-calm-100:focus {
 
 .main-nav a {
   display: block;
-  text-decoration: none;
-  padding: .5em 3em .5em 1em; }
-  .main-nav a:hover, .main-nav a:focus {
-    background-color: #003954;
-    color: #fff; }
+  text-decoration: none; }
 
 .main-nav--open {
   display: block;
@@ -7710,31 +7706,44 @@ a.text-light-calm-100:hover, a.text-light-calm-100:focus {
 
 .nav-item {
   position: relative;
-  width: 200px; }
-  .nav-item > a.active {
-    background-color: #003954;
-    color: #fff; }
+  cursor: pointer; }
+  .nav-item .submenu-toggle {
+    padding: .5em;
+    -webkit-transition: background-color 1s;
+    -moz-transition: background-color 1s;
+    -o-transition: background-color 1s;
+    -ms-transition: background-color 1s;
+    transition: background-color 1s; }
+    .nav-item .submenu-toggle > a {
+      padding: 0;
+      margin: 0;
+      -webkit-transition: background-color 1s;
+      -moz-transition: background-color 1s;
+      -o-transition: background-color 1s;
+      -ms-transition: background-color 1s;
+      transition: background-color 1s;
+      color: black; }
+      .nav-item .submenu-toggle > a:hover, .nav-item .submenu-toggle > a:focus {
+        color: #fff; }
+  .nav-item .submenu-toggle:hover,
+  .nav-item .submenu-toggle:focus {
+    color: #fff;
+    background-color: #3d82ab; }
 
 .submenu {
   display: none;
   background-color: #f2f6f9; }
   .submenu a {
-    color: black; }
+    color: black;
+    padding: .5em;
+    -webkit-transition: background-color 300ms;
+    -moz-transition: background-color 300ms;
+    -o-transition: background-color 300ms;
+    -ms-transition: background-color 300ms;
+    transition: background-color 300ms; }
     .submenu a:hover, .submenu a:focus {
       background-color: #3d82ab;
       color: #fff; }
-
-.submenu-toggle {
-  cursor: pointer;
-  -webkit-transition: background-color 1s;
-  -moz-transition: background-color 1s;
-  -o-transition: background-color 1s;
-  -ms-transition: background-color 1s;
-  transition: background-color 1s; }
-
-.submenu-toggle:hover {
-  color: #fff;
-  background-color: #003954; }
 
 .submenu--open {
   display: block; }
@@ -7745,15 +7754,40 @@ img {
 @media (min-width: 992px) {
   img {
     margin: 0; }
-  .menu-toggle,
-  .submenu {
+  .menu-toggle {
     display: none; }
   .main-nav {
     float: right;
     position: relative;
     display: block;
     padding: 0;
-    left: 0; } }
+    left: 0; }
+  .main-nav li {
+    float: left;
+    display: inline-block; }
+  .nav-item {
+    border-left: 1px solid #2f6f9f;
+    border-right: 1px solid #4f9fcf;
+    background-color: #3d82ab; }
+    .nav-item div.submenu-toggle:hover + div.submenu, .nav-item div.submenu-toggle:focus + div.submenu {
+      width: 194px;
+      position: absolute;
+      display: block;
+      z-index: 1; }
+    .nav-item:first-child {
+      border-left: none; }
+    .nav-item .submenu {
+      background-color: #3d82ab; }
+      .nav-item .submenu a {
+        color: #f7f7f9;
+        border: none; }
+        .nav-item .submenu a:hover, .nav-item .submenu a:focus {
+          color: #fff;
+          background-color: #00aa88; }
+      .nav-item .submenu:hover, .nav-item .submenu:focus {
+        width: 194px;
+        position: absolute;
+        display: block; } }
 
 .page-content {
   background-image: url(/images/img-L_nkoGwvSGk-rOK.png);

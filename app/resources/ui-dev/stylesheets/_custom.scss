@@ -81,12 +81,6 @@
 .main-nav a {
   display: block;
   text-decoration: none;
-  padding: .5em 3em .5em 1em;
-  &:hover,
-  &:focus {
-    background-color: $primary;
-    color: #fff;
-  }
 }
 
 .main-nav--open {
@@ -141,10 +135,34 @@
 //--- sub menu
 .nav-item {
   position: relative;
-  width: 200px;
-  > a.active {
-    background-color: $primary;
+  cursor: pointer;
+  .submenu-toggle {
+    padding: .5em;
+    -webkit-transition: background-color 1s;
+    -moz-transition: background-color 1s;
+    -o-transition: background-color 1s;
+    -ms-transition: background-color 1s;
+    transition: background-color 1s;
+    > a {
+      padding: 0;
+      margin: 0;
+      -webkit-transition: background-color 1s;
+      -moz-transition: background-color 1s;
+      -o-transition: background-color 1s;
+      -ms-transition: background-color 1s;
+      transition: background-color 1s;
+      color: black;
+      &:hover,
+      &:focus {
+        color: #fff;
+
+      }
+    }
+  }
+  .submenu-toggle:hover,
+  .submenu-toggle:focus {
     color: #fff;
+    background-color: $secondary;
   }
 }
 
@@ -153,26 +171,18 @@
   background-color: #f2f6f9;
   a {
     color: black;
+    padding: .5em;
+    -webkit-transition: background-color 300ms;
+    -moz-transition: background-color 300ms;
+    -o-transition: background-color 300ms;
+    -ms-transition: background-color 300ms;
+    transition: background-color 300ms;
     &:hover,
     &:focus {
       background-color: $secondary;
       color: #fff;
     }
   }
-}
-
-.submenu-toggle {
-  cursor: pointer;
-  -webkit-transition: background-color 1s;
-  -moz-transition: background-color 1s;
-  -o-transition: background-color 1s;
-  -ms-transition: background-color 1s;
-  transition: background-color 1s;
-}
-
-.submenu-toggle:hover {
-  color: #fff;
-  background-color: $primary;
 }
 
 .submenu--open {
@@ -187,8 +197,7 @@ img {
   img {
     margin: 0;
   }
-  .menu-toggle,
-  .submenu {
+  .menu-toggle {
     display: none;
   }
 
@@ -198,6 +207,47 @@ img {
     display: block;
     padding: 0;
     left: 0;
+  }
+  .main-nav li {
+    float: left;
+    display: inline-block;
+  }
+  .nav-item {
+    border-left: 1px solid #2f6f9f;
+    border-right: 1px solid #4f9fcf;
+    background-color: $secondary;
+    div.submenu-toggle {
+      &:hover,
+      &:focus {
+        + div.submenu {
+          width: 194px;
+          position: absolute;
+          display: block;
+          z-index: 1;
+        }
+      }
+    }
+    &:first-child {
+      border-left: none;
+    }
+    .submenu {
+      background-color: $secondary;
+      a {
+        color: #f7f7f9;
+        border: none;
+        &:hover,
+        &:focus {
+          color: #fff;
+          background-color: #00aa88;
+        }
+      }
+      &:hover,
+      &:focus {
+        width: 194px;
+        position: absolute;
+        display: block;
+      }
+    }
   }
 }
 
