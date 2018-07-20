@@ -1,0 +1,733 @@
+// Information:    UPDATE: 2018.07.20
+// This _lib.scss file declares al libraries I use for the project.
+// The following is the libraries I use:
+//        1. Normalize.css
+//        2. Mappy-breakpoints (for breakpoints)
+//        3. Typi (for typography)
+
+
+// 1. Normalize.css
+// -------------
+/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+
+body {
+  margin: 0;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10+.
+ */
+
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+
+[hidden] {
+  display: none;
+}
+
+
+
+//  2. Mappy-breakpoints (for breakpoints)
+// ------------
+// Mappy breakpoints
+// -----------------
+// Output media query with focus on min-width, max-width, min-height and max-height.
+// Other media rules are passed as the second argument in a map
+//
+// @author Zell Liew
+// =================
+$breakpoints: () !default;
+$mappy-queries: () !default;
+
+// Mappy BP [Mixin]
+// ----------------
+// - $queries         : <string> or <number> in the format:
+//                      <min-width> <max-width> h <min-height> <max-height> <key> <value>
+// - $type            : <media-type>
+// - $query-fallback  : <string> selector class
+// - $breakpoints     : <map>
+@mixin mappy-bp($queries, $type: all, $query-fallback: null, $breakpoints: $breakpoints) {
+
+  // Gets mappy map through mappy-bp fn
+  $mappy-map: mappy-bp($queries, $type, $query-fallback, $breakpoints);
+
+  // Outputs media string
+  @media #{map-get($mappy-map, type)} and #{map-get($mappy-map, media-string)} {
+    @content;
+  }
+
+  // If a query fallback is provided
+  @if $query-fallback {
+    #{$query-fallback} & {
+      @content;
+    }
+  }
+}
+
+// Mappy Query [Mixin]
+// -------------------
+// Output query from $mappy-queries map.
+// $query : <string> from $mappy-queries key
+@mixin mappy-query($query, $mappy-queries: $mappy-queries) {
+  @if not map-has-key($mappy-queries, $query) {
+    @error "#{$mappy-queries} does not contain #{$query}";
+  }
+
+  $mappy-map: map-get($mappy-queries, $query);
+
+  @media #{map-get($mappy-map, type)} and #{map-get($mappy-map, media-string)} {
+    @content;
+  }
+
+  // If a query fallback is provided
+  @if map-get($mappy-map, query-fallback) {
+    #{map-get($mappy-map, query-fallback)} & {
+      @content;
+    }
+  }
+}
+
+// Mappy BP [Function]
+// -------------------
+// Returns a map with 3 keys
+// - type           : Media type
+// - media-string   : media query string
+// - query-fallback : query fallback (if any)
+@function mappy-bp($queries, $type: all, $query-fallback: null, $breakpoints: $breakpoints) {
+  $media-string: ();
+  $_return: ();
+  $media-map: parse-bp($queries, $breakpoints);
+
+  @each $key, $value in $media-map {
+    @if $value and $value != 0 {
+      @if $media-string == (()) {
+        $media-string: append($media-string, unquote("(#{$key}: #{$value})"));
+      }
+
+      @else {
+        $media-string: append($media-string, unquote("and (#{$key}: #{$value})"));
+      }
+    }
+  }
+  $_return: (
+          type: $type,
+          media-string: implode($media-string),
+          query-fallback: $query-fallback
+  );
+
+  @return $_return;
+}
+
+// BP [Mixin]
+// ----------
+// Convenience mixin for Mappy Breakpoints
+@mixin bp($queries, $type: all, $query-fallback: null, $breakpoints: $breakpoints) {
+  @include mappy-bp($queries, $type, $query-fallback, $breakpoints) {
+    @content;
+  }
+}
+
+// Parse BP [function]
+// -------------------
+// Parses arguments and returns a map with 4 keys
+@function parse-bp($queries, $breakpoints) {
+  $_return: ();
+  $_i: 1;
+  $_minw: null;
+  $_maxw: null;
+  $_minh: null;
+  $_maxh: null;
+  $_length: length($queries);
+
+  // Checks for width queries
+  $_minw: nth($queries, 1);
+  $_minw: mappy-validate($_minw, $breakpoints);
+
+  // Check for width queries
+  @if $_minw {
+    $_minw: mappy-convert-to-em($_minw);
+    $_return: map-merge($_return, (min-width: $_minw));
+    $queries: set-nth($queries, 1, null);
+  }
+
+  // Checks if there is a max width query
+  @if $_minw and $_length >= 2 {
+    $_maxw: nth($queries, 2);
+    $_maxw: mappy-validate($_maxw, $breakpoints);
+  }
+
+  @if $_maxw {
+    $_maxw: mappy-convert-to-em($_maxw - 1px);
+    $_return: map-merge($_return, (max-width: $_maxw));
+    $queries: set-nth($queries, 2, null);
+  }
+
+  // Checks for height queries
+  $_h: index($queries, h) or index($queries, height);
+
+  @if $_h {
+    $_minh: nth($queries, $_h + 1);
+    $_minh: mappy-validate($_minh, $breakpoints);
+
+    @if $_minh {
+      $_minh: mappy-convert-to-em($_minh);
+      $_return: map-merge($_return, (min-height: $_minh));
+      $queries: set-nth($queries, $_h + 1, null);
+    }
+
+    // Checks if there is a max height query
+    @if $_length - $_h >= 2 {
+      $_maxh: nth($queries, $_h + 2);
+      $_maxh: mappy-validate($_maxh, $breakpoints);
+    }
+
+    @if $_maxh {
+      $_maxh: mappy-convert-to-em($_maxh - 1px);
+      $_return: map-merge($_return, (max-height: $_maxh));
+      $queries: set-nth($queries, $_h + 2, null);
+    }
+    // Reset h marker
+    $queries: set-nth($queries, $_h, null);
+  }
+
+  // Checks for other queries
+  @while $_i <= length($queries) {
+    $_key: nth($queries, $_i);
+
+    @if $_key and $_length - $_i >= 1 {
+      $_val: nth($queries, $_i + 1);
+      $_return: map-merge($_return, (#{$_key}: $_val));
+      $queries: set-nth($queries, $_i, null);
+      $queries: set-nth($queries, $_i + 1, null);
+    }
+
+    @else if $_key {
+      @warn unquote('"Mappy Breakpoints is missing value for media feature "#{$_key}""');
+    }
+    $_i: $_i + 1;
+  }
+  @return $_return;
+}
+
+// Mappy Validate [Function]
+// -------------------------
+// Checks if $query given is one of the following:
+// 1) Is a $key in the $breakpoints map
+// 2) Is a number
+// 3) Is a "max", "max-width" or "max-height" string
+@function mappy-validate($query, $breakpoints) {
+  $_return: null;
+
+  @if map-has-key($breakpoints, $query) {
+    $_return: map-get($breakpoints, $query);
+  }
+
+  @else if type-of($query) == number {
+    $_return: $query;
+  }
+
+  @else if $query == "max" or $query == "max-height" or $query == "max-width" {
+    $_return: 0;
+  }
+
+  @else {
+    $_return: null;
+  }
+  @return $_return;
+}
+
+// Mappy Convert To Em [Function]
+// -------------------------------
+// Checks and converts px values to em. Leave other units untouched.
+
+@function mappy-convert-to-em($val) {
+  @if unit($val) == "px" or $val == 0 {
+    @return mappy-em($val);
+  } @else if unit($val) == "em" {
+    @return $val;
+  } @else if unit($val) == "rem" {
+    @return mappy-strip-unit($val) * 1em;
+  } @else {
+    @error unquote("Breakpoint value must have a unit if it's a number");
+  }
+}
+
+// Mappy Em [Function]
+// --------------------
+// Converts pixels to em with $base-font-size
+// - https://gist.github.com/ijy/1441967
+@function mappy-em($target, $context: 16px) {
+  @if $target == 0 {
+    @return 0;
+  }
+  @return $target / $context * 1em;
+}
+
+@function mappy-strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+// Implode [Function]
+// --------------------
+// Implode a list into a string
+@function implode($list, $glue: ' ') {
+  $res: null;
+  $len: length($list);
+
+  @for $i from 1 through $len {
+    $e: nth($list, $i);
+    @if $i == $len {
+      $res: unquote("#{$res}#{$e}");
+    }
+    @else {
+      $res: unquote("#{$res}#{$e}#{$glue}");
+    }
+  }
+
+  @return $res;
+}
+
+
+//  3. Typi (for typography)
+// -----------
+
+@import 'private';
+@import 'public';
+
+////
+/// @author Zell Liew
+/// @access public
+/// @group config
+////
+
+// Breakpoints Map
+// ----------
+/// Contains all breakpoints Typi uses whenever writes media queries.
+/// Possible to output media queries in em (even when you write in pixels)
+/// @example
+///   $breakpoints: (
+///     small: 400px,
+///     med:   600px,
+///     large: 800px
+///   );
+/// @see typi-breakpoint
+$breakpoints: () !default;
+
+// Typefaces Map
+// ----------
+/// Contains typefaces that Typi uses.
+/// @prop {Number} font-size-ratio [1] - ratio of font-size to primary font-size
+/// @prop {Map} stack - font stack
+/// @prop {Map} weights - font weights
+/// @example
+///   $typefaces: (
+///     primary: (
+///       font-size-ratio: 1,
+///       stack: (Helvetica, Arial, sans-serif),
+///       weights: (
+///         light: 300,
+///         normal: 400,
+///         bold: 700
+///       ),
+///     )
+///   );
+$typefaces: false !default;
+
+// Typi
+// ----------
+/// Contains font-map, which in turn contains font-size and
+/// line-height properties used at all breakpoints.
+///
+/// - **First value** - font-size (see below)
+/// - **second value** - line-height (must be unitless)
+///
+/// **Font-size**
+///
+/// Font-size can either be either of these values. They will
+/// automatically be converted into `rem` or `em`
+///
+/// - `px` - base font-sizes must be written in pixels
+/// - `em`
+/// - unitless (requires typi-ms)
+///
+/// @prop {Map} $font-map - Font map that holds breakpoint key
+/// @prop {string} $breakpoint - holds font-size and line-height list
+///
+/// @example
+///   $typi: (
+///     base: (
+///       null: (18px, 1.5),
+///       small: 20px,
+///       med: 22px,
+///       large: (24px, 1.6)
+///     ),
+///     h1: (
+///       null: (24px, 1.3),
+///       med: 2em,
+///       large: 3em
+///     )
+///   );
+/// @see typi-ms
+/// @requires $breakpoints
+$typi: (
+        base: (
+                null: (16px, 1.5)
+        )
+) !default;
+
+// Typi-ms
+// ----------
+/// Contains modular scale base and ratios for
+/// you to change ratios and bases at different
+/// breakpoints.
+///
+/// **Make sure** $typi-ms, $typi and $breakpoints **contain
+/// all breakpoints** (except null) if you use this functionality
+///
+/// @requires $typi
+/// @requires $breakpoints
+///
+/// @example
+///   $typi-ms: (
+///     null: 1.2, // one ratio: 1.2
+///     small: 1.2,
+///     med: (1.2 1.5), // two ratios: 1.2, 1.5
+///     large: (1em 2em 1.2), // two bases: 1em, 2em | one ratio: 1.2
+///     huge: (1.5em 1.2 1.5) // one base: 1.5em | two ratios: 1.2, 1.5
+///   );
+$typi-ms: false !default;
+
+// Typi-breakpoint
+// ----------
+/// Integrates Typi with Mappy Breakpoints or Breakpoint-sass
+/// @example
+///   $typi-breakpoint: 'mappy-bp'; // uses mappy-breakpoint to create media queries
+///   $typi-brekapoint: 'breakpoint'; // uses breakpoint-sass to create media queries
+/// @link https://github.com/zellwk/mappy-breakpoints Mappy-breakpoints
+/// @link https://github.com/at-import/breakpoint Breakpoint Sass
+$typi-breakpoint: null !default;
