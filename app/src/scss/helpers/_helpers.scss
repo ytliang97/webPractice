@@ -1,0 +1,52 @@
+// Information:   UPDATE: 2018.07.20
+// The helpers.scss file contains convenient mixins and functions that used in the project.
+// Tho following is the mixins  I use:
+//       1. Force an Element To Self-Clear its Children
+//       2. Hiding Content for Accessibility
+
+
+//  1. Force an Element To Self-Clear its Children
+//  BY CHRIS COYIER
+// https://css-tricks.com/snippets/css/clear-fix/
+// ------------
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+// 2. Hiding Content for Accessibility
+// BY JONATHAN SNOOK
+// https://snook.ca/s/992
+// --------------
+/* Text Indent */
+.element-invisible-1 {
+  text-indent: -9999em;
+  outline: 0;
+}
+
+/* Position Absolute and Collapsed */
+.element-invisible-2 {
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+/* Position Absolute and Offscreen */
+.element-invisible-3 {
+  position: absolute;
+  top: -999999em;
+  left: auto;
+  width: 1px;
+  height: 1px;
+  overflow:hidden;
+}
+
+/* Clip Method */
+.element-invisible-4 {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
